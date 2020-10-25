@@ -1,0 +1,92 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="no">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spiritus Yoga Marie - Jeg tilbyr Yoga til alle.</title>
+
+    <!-- Styling -->
+    <!-- Bootstrap CSS, and Font Awesome-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+    <!-- Custom styling sheet -->
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-light bg-light">
+			<a class="navbar-brand mx-auto" href="{% url 'index' %}"><img class="rounded-circle col-sm-4 offset-sm-4"
+                src="https://i.imgur.com/BEAE1lf.png" alt="SpirtusYogaMarie">
+                <span class="sr-only">(current)</span></a>
+		</nav>
+		<nav class="navbar navbar-expand-sm navbar-light bg-light">
+			<button class="navbar-toggler ml-auto" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+			<div class="collapse navbar-collapse" id="navbarNav">
+				<ul class="navbar-nav mx-auto">
+					<li class="nav-item active text-size-navbar">
+						<a class="nav-link" href="{% url 'about' %}">Om Marie</a>
+					</li>
+					<li class="nav-item text-size-navbar">
+						<a class="nav-link" href="#">Kurs</a>
+					</li>
+					<li class="nav-item text-size-navbar">
+						<a class="nav-link" href="{% url 'contact' %}">Kontakt</a>
+					</li>
+				</ul>
+			</div>
+            
+		</nav>
+    </header>
+    {% block content %}
+    {% endblock %}
+
+    <footer>
+		    <div id="panel-header">
+			<div class="panel panel-default">
+				<div class="panel-heading">
+					<h2 class="panel-title">Spiritus Yoga Marie</h2>
+				</div>
+			</div>
+		    </div>
+		    <div class="row">
+			<div class="col-sm-4 offset-sm-4"><a href="https://www.facebook.com/spiritusyogamarie/" target="_blank">
+					<i class="fa fa-facebook"></i></a>
+				<i class="fa fa-instagram"></i>
+			</div>
+		    </div>
+		    <div class="container">
+			<div class="row">
+				<div class="col-sm-12 col-md-6">
+					<span>
+                    <h3>Om Spiritus Yoga Marie</h3>
+                    <h6>Marie er en Freelance yogalærer og medlem av Yoga Allianse, Marie tilbyr flere ulike typer yogakurs på Sotra, Bergen og omegn.</h6>
+                    <h6>Spiritus Yoga tilbyr Ashtanga – Vinyasa yogakurs, senior yogakurs, fjell yoga, Yin Yoga og bedrifts interne yogakurs.</h6><br>
+                    <h6>Medlem av:</h6>
+                    <img src="https://i.imgur.com/GVCHpWx.png" alt="SpiritusYoga">
+                </span>
+				</div>
+				<div class="col-sm-12 col-md-6">
+
+                    </div>
+			</div>
+
+			<div class="text-center">
+				<a class="uppercase" href="index.php">Hjem</a>
+				<a class="uppercase" href="om-marie.php">Om Marie</a>
+				<a class="uppercase" href="kurs.php">Kurs</a>
+				<a class="uppercase" href="kontakt.php">Kontakt</a>
+			</div>
+			<div class="text-center block">
+				<i class="fa fa-copyright"></i>
+				<span>All rights reserved Spiritus Yoga Marie</span>
+				<br>
+				<span>Tjenesten er levert av Morten Viken</span>
+			</div>
+		    </div>
+	    </footer>
+</body>
+</html>
