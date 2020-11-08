@@ -1,47 +1,412 @@
-/* Import fonts */
 @import url('https://fonts.googleapis.com/css?family=Roboto:100,200,300,400,500,600,700|Exo:100,200,300,400,500,600,700');
 
-
-/*----------- Special settings */
+/*----------Colours */
 body {
+    font-family: "Roboto", sans-serif;
+    overflow-x: hidden;
+    color: rgb(60, 63, 54);
     background-color: rgb(189, 157, 132);
-    font-family: "Roboto", Sans-serif;
-    color: rgb(60, 63, 54); 
 }
 
-i.fa.fa-copyright {
-    color: rgb(60, 63, 54);
-}
+/*--------- special font, margins */
 
-.text-black {
-    color: rgb(60, 63, 54);
-}
-
-/*---------- Index page */
-
-h1.header-settings {
-    text-align: center;
+.font-prop {
+    padding-top: 15px;
+    padding-bottom: 15px;
     background-color: rgb(60, 63, 54);
     color: rgb(189, 157, 132);
-    height: 75px;
-    padding-top: 1%;
+    font-weight: 400;
+    letter-spacing: 2px;
+
 }
 
-/*------------------ Footer ----- */ 
 
-h2.panel-title {
+
+/*----------- Logo */
+.rounded-circle {
+    border: 1px solid rgb(60, 63, 54);
+    padding: 3px;
+}
+
+/* ---------- Navbar */
+.text-size-navbar {
+    font-size: 25px;
+}
+
+.navbar.navbar-expand-sm.navbar-light.bg-light {
+    padding: 0;
+}
+
+.bg-light {
+    background-color: rgb(189, 157, 132);
+}
+
+.background-img { 
+  background: url("https://i.imgur.com/RH6glJq.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 675px;
+}
+
+.background-img-two { 
+  background: url("https://i.imgur.com/RH6glJq.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 500px;
+}
+
+
+div.jumbotron { 
+    color: rgb(60, 63, 54);
+    opacity: 1;
     text-align: center;
-    background-color: rgb(60, 63, 54);
-    color: rgb(189, 157, 132);
-    height: 75px;
-    padding-top: 1.5%;
 }
+
+.top-margin {
+    margin-top: 75px;
+}
+
+/*--- Anchor tags ----*/
+a {
+    color: rgb(60, 63, 54);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+a:hover {
+    color: rgb(60, 63, 54);
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+a.btn.btn-primary.btn-lg {
+    background-color: rgb(189, 157, 132); 
+    border-color: rgb(189, 157, 132);
+}
+
+.btn-primary:not(:disabled):not(.disabled).active .btn-primary:not(:disabled):not(.disabled):active, .show>.btn-primary.dropdown-toggle {
+    color: rgb(189, 157, 132);
+    background-color: rgb(189, 157, 132);
+    border-color: rgb(189, 157, 132);
+}
+
+p {
+    margin-bottom: 25px;
+}
+
+p.lead {
+    margin: 0;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+    font-weight: 400;
+    letter-spacing: 2px;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1.display-4 {
+    margin: 0;
+}
+
+h1.font-prop {
+    margin-bottom: 0;
+}
+
+hr.my-4 {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+div.container {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div.row {
+    max-width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+div.col-12 {
+    padding-left: 0;
+    padding-right: 0;
+
+}
+
+div.col-sm-12.col-md-12.col-lg-6.col-xl-6 {
+    padding-left: 0;
+    padding-right: 0;
+}
+
+div.col-xs-8.offset-xs-2.col-md-8.offset-md-2.col-lg-8.offset-lg-2.col-xl-8.offset-xl-2 {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+.margin-top {
+    margin-top: 10%;
+}
+
+.extra-margin {
+    margin-bottom: 5%;
+}
+
+.hero-image {
+  background-image: url("https://i.imgur.com/tLmp7ta.jpg");
+  background-color: #cccccc;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: 1px solid rgb(60, 63, 54);
+  margin-bottom: 5%;
+}
+
+.hero-image-one {
+  background-image: url("https://i.imgur.com/z5Cd3ru.jpg");
+  background-color: #cccccc;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: 1px solid rgb(60, 63, 54);
+  margin-bottom: 5%;
+}
+
+.hero-image-two {
+  background-image: url("https://i.imgur.com/JN4rOVY.jpg");
+  background-color: #cccccc;
+  height: 400px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+  border: 1px solid rgb(60, 63, 54);
+  margin-bottom: 5%;
+}
+
+.border-bottom {
+    border-top: 2px solid #4b4f44;
+}
+
+div.lining {
+    border: 1px solid #4b4f44;
+    margin-bottom: 5%;
+}
+
+/*---------------Footer */
+.panel-heading {
+    text-align: center;
+    height: 100px;
+    background-color: rgb(60, 63, 54);
+    padding-top: 25px;
+    color: rgb(189, 157, 132);
+} 
 
 div.col-sm-12.col-md-6 {
     text-align: center;
     font-weight: 400;
     letter-spacing: 2px;
+    padding-bottom: 5%;
+}
+
+i.fa.fa-facebook {
+    transform: scale(2);
+    margin: 7%;
+    color: rgb(60, 63, 54);
+}
+
+i.fa.fa-instagram {
+    transform: scale(2);
+    margin: 7%;
+
+}
+
+div.row {
+    text-align: center; 
+}
+
+i.fa.fa-copyright {
+    text-align: center;
+}
+
+.text-center {
+    text-align: center; 
+}
+
+div.panel-heading {
+    padding-bottom: 75px;
+}
+
+.spacing {
+    padding-top: 20px;
+}
+
+a.uppercase {
+    color: rgb(60, 63, 54);
+}
+
+
+
+/*-------------Om Marie */
+
+h1.padding-top {
+    padding-top: 5%;
+}
+
+#extra-about-style {
+    padding-top: 2%;
+}
+
+div.col-sm-12.col-lg-6 {
+    padding-top: 2%;
+    padding-bottom: 2%;
+
+}
+.rounded-circle.extra-styling {
+    height: 300px;
+    width: 300px;
+    margin-top: 5%;
+    margin-bottom: 5%;
+}
+
+div h5 {
+    padding-bottom: 10%;
+}
+
+/*--------------- Kontakt */
+.borderline {
+    border: 1px solid rgb(60, 63, 54);
+    border-radius: 5px;
+    padding: 5%;
+}
+
+div.col-sm-12.col-md-6.padding-extra {
+    padding-top: 5%;
+    padding-bottom: 2%;
+}
+
+div.container.top-padding {
+    padding-top: 2.5%;
+}
+
+div.col-12.padding-top {
+    padding-top: 3%;
+}
+
+a button.btn.btn-primary.btn-lg {
+    background-color: rgb(60, 63, 54); 
+    border-color: rgb(60, 63, 54);
+}
+
+div.col-4.offset-4 {
+    text-align: center;
+}
+
+i.fa.fa-mobile {
+    transform: scale(1.5);
+}
+
+i.fa.fa-envelope {
+    transform: scale(1.5);
+}
+
+i.fab.fa-facebook-messenger {
+    transform: scale(1.5);
+}
+
+h4 {
+    text-align:center;
+}
+
+div.col-8.offset-2 {
+    text-align: center;
+}
+
+
+
+/*---------- Kurs */
+
+.extra-padding {
+    padding-top: 7.5%;
+    
+}
+
+.text-fix {
+    text-shadow: 2px 2px #fff;
+}
+
+div.col-sm-12.col-lg-4 {
+    text-align: center;
     padding-top: 5%;
     padding-bottom: 5%;
 }
 
+div.card {
+    width: auto;
+}
+
+.btn.btn-primary {
+    background-color: rgb(60, 63, 54);
+}
+
+.btn-primary {
+    border-color: rgb(60, 63, 54);
+}
+
+.btn-primary:not(:disabled):not(.disabled):active {
+    background-color: rgb(60, 63, 54);
+    border-color: rgb(60, 63, 54);
+}
+
+.btn-color {
+    text-align: center;
+    background-color: rgb(189, 157, 132);
+    color: rgb(60, 63, 54);
+}
+/*-------------------------Ashtanga - Vinyasa --*/
+.background-image-three { 
+  background: url("https://i.imgur.com/RH6glJq.jpg") no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 50px;
+}
+
+.underline {
+    border-bottom: 1px solid #4b4f44;
+    border-color: rgb(60, 63, 54);
+}
+
+div.col-sm-12.col-lg-8.offset-lg-2 {
+    padding-top: 1.5%;
+}
+
+#pic-settings {
+    max-width: 100%;
+}
+
+#margin-top {
+    padding-top: 2%;
+}
+
+#button-styling {
+    margin-bottom: 5%;
+    width: 250px;
+    color: rgb(189, 157, 132);
+}
+
+#text-center {
+    text-align: center;
+}
