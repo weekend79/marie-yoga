@@ -1,4 +1,46 @@
 {% extends 'base.html' %} {% load static %}
 {% block content %}
-<h1>Contact Page</h1>
+
+<div class="container top-padding">
+		<div class="col-10 offset-1 borderline">
+			<h3>For enkel kontakt bruk kontaktskjema under.</h3>
+			<p>Jeg svarer alle henvendelser så snart som mulig og senest innen 24 timer.</p>
+			<form action="" method="POST">
+                {% csrf_token %}
+				<div class="form-row">
+					<div class="col-12 padding-extra">
+						<input type="text" class="form-control" name="name" id="name" placeholder="Fullt Navn">
+                    </div>
+					<div class="col-12 padding-top">
+						<div class="form-group">
+							<input type="email" class="form-control" name="from_email" id="from_email" aria-describedby="emailHelp" placeholder="din@e-post.com">
+						</div>
+					</div>
+					<div class="col-12 padding-top">
+						<div class="form-group">
+						    <input type="text" class="form-control" name="subject" id="subject" placeholder="Emne">
+                        </div>
+					</div>
+					<div class="col-12 padding-top">
+						<div class="form-group">
+							<textarea class="form-control" name="message" id="message" rows="5" placeholder="Skriv din melding her..."></textarea>
+						</div>
+					</div>
+					<div class="col-4 offset-4">
+                        <input type="submit" class="btn btn-primary btn-lg center" value="Send">
+					</div>
+				</div>
+			</form>
+		</div>
+        <br>
+		<div class="col-sm-12 col-lg-6 offset-lg-3">
+			<h4>Andre måter å kontakte meg på</h4>
+			<div class="col-8 offset-2">
+				<p><i class="fa fa-mobile"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;926 80 487</p>
+                <p><i class="fab fa-facebook-messenger"></i>&nbsp;&nbsp;&nbsp;&nbsp;m.me/spiritusyogamarie</p>
+                <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;mskogedal@hotmail.com</p>
+
+			</div>
+		</div>
+	</div>
 {% endblock %}
