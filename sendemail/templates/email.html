@@ -1,0 +1,29 @@
+<!-- templates/email.html -->
+{% extends 'base.html' %} {% load static %}
+{% block content %}
+
+<div class="container top-padding">
+    <h3>For enkel kontakt bruk kontaktskjema under.</h3>
+    <p>Jeg svarer alle henvendelser så snart som mulig og senest innen 24 timer.</p>
+    <div class="col-10 offset-1 borderline">
+        <form method="post">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <div class="form-actions">
+                <div class="col-4 offset-4">
+				    <button type="submit" class="btn btn-primary btn-lg center">Send</button>
+				</div>
+            </div>
+        </form>
+    </div>
+    <br>
+	<div class="col-sm-12 col-lg-6 offset-lg-3">
+		<h4>Andre måter å kontakte meg på</h4>
+		<div class="col-8 offset-2">
+			<p><i class="fa fa-mobile"></i>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;926 80 487</p>
+            <p><i class="fab fa-facebook-messenger"></i>&nbsp;&nbsp;&nbsp;&nbsp;m.me/spiritusyogamarie</p>
+            <p><i class="fa fa-envelope"></i>&nbsp;&nbsp;&nbsp;&nbsp;mskogedal@hotmail.com</p>
+		</div>
+	</div>
+</div>
+{% endblock %}
