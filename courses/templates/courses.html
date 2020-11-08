@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="container">
+	<div class="col-12">
+		<div class="row row-flex">
+            {% for course in courses %}
+				<div class="col-sm-12 col-lg-4">
+					<div class="card">
+                        <form>
+
+                            {% if course.image %}
+                                <img class="card-img-top img-fluid" src="{{ course.image.url }}" alt="{{ course.name }}">
+                            {% else %}
+                                <img class="card-img-top img-fluid" src="{{ MEDIA_URL }}noimage.png" alt="{{ course.name }}">
+                            {% endif %}
+                            <div class="card-body" style="text-align:center;">
+                                <h5 class="card-title">{{ course.name }}</h5>
+                                <p>Varighet: {{ course.duration }}</p>
+                                <p>Dato: {{ course.coursedate }}</p>
+                                <p>Kl: {{ course.coursetime }}</p>
+                                <p>Pris: {{ course.price }},-</p>
+                                <a href="#" class="form-text text-muted" style="text-align:center">Les Mer</a>
+                                
+                                <button href="#" type="button" class="btn btn-color">Bestille</button>    
+                            </div>
+						</form>
+					</div>
+				</div>
+            {% endfor %}
+		</div>
+	</div>
+</div>
+
+
+    
+{% endblock %}
