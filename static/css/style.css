@@ -267,12 +267,12 @@ h1.padding-top {
 #extra-about-style {
     padding-top: 2%;
 }
-
 div.col-sm-12.col-lg-6 {
     padding-top: 2%;
     padding-bottom: 2%;
 
 }
+
 .rounded-circle.extra-styling {
     height: 300px;
     width: 300px;
@@ -409,4 +409,10 @@ div.col-sm-12.col-lg-8.offset-lg-2 {
 
 #text-center {
     text-align: center;
+}
+
+/*------------ Order Form --*/
+.btn-white {
+    background-color: rgb(60, 63, 54);
+    color: rgb(189, 157, 132);
 }
