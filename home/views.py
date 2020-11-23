@@ -1,4 +1,5 @@
 from django.shortcuts import render
+from home.models import About
 
 
 # Create your views here.
@@ -11,4 +12,6 @@ def index(request):
 def about(request):
     """A view to return the about page"""
 
-    return render(request, 'about.html')
+    abouts = About.objects.all()
+    return render(request, 'about.html', {"abouts": abouts })
+
