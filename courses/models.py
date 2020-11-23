@@ -16,17 +16,3 @@ class Course(models.Model):
 
     def __str__(self):
         return self.name
-
-
-class Order(models.Model):
-    fullname = models.CharField(max_length=125, default='')
-    email = models.EmailField(max_length=254, null=False,
-                              blank=False)
-    phone = models.CharField(max_length=20)
-    course_name = models.CharField(max_length=125)
-    course_date = models.DateField()
-    course_time = models.TimeField()
-    order_message = models.TextField()
-
-    def __str__(self):
-        return self.course_name
