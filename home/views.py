@@ -13,5 +13,4 @@ def about(request):
     """A view to return the about page"""
 
     abouts = About.objects.all()
-    return render(request, 'about.html', {"abouts": abouts })
-
+    return render(request, 'about.html', {"abouts": abouts})
