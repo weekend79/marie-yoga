@@ -33,6 +33,17 @@
 					<li class="nav-item text-size-navbar">
 						<a class="nav-link" href="{% url 'courses' %}">Kurs</a>
 					</li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Tjenester
+                        </a>
+                        <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                        <a class="dropdown-item" href="{% url 'ash_vin' %}">Ashtanga - Vinyasa Flow</a>
+                        <a class="dropdown-item" href="{% url 'senior' %}">Senior Yoga</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="{% url 'menn' %}">Yoga for Menn</a>
+                        </div>
+                    </li>
 					<li class="nav-item text-size-navbar">
 						<a class="nav-link" href="{% url 'contact' %}">Kontakt</a>
 					</li>
