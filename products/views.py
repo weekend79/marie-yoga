@@ -1,11 +1,13 @@
 from django.shortcuts import render
+from products.models import AshVin
 
 
 # Create your views here.
-def ash_vin(request):
+def ashvin(request):
     """A view to return the Ashtanga - Vinyasa course"""
 
-    return render(request, 'ashtanga-vinyasa.html')
+    ashvins = AshVin.objects.all()
+    return render(request, 'ashtanga-vinyasa.html', {"ashvins": ashvins})
 
 
 def senior(request):

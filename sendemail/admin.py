@@ -1,6 +1,16 @@
 from django.contrib import admin
-from sendemail.models import Contact
+from .models import Contact
 
 
 # Register your models here.
+class ContactAdmin(admin.ModelAdmin):
+    list_display = (
+        'name',
+        'email',
+        'date',
+    )
+
+    ordering = ('name',)
+
+
 admin.site.register(Contact)
