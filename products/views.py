@@ -1,5 +1,5 @@
 from django.shortcuts import render
-from products.models import AshVin
+from products.models import AshVin, Senior, Menn
 
 
 # Create your views here.
@@ -13,10 +13,12 @@ def ashvin(request):
 def senior(request):
     """A view to return the Senior courses"""
 
-    return render(request, 'senior.html')
+    seniors = Senior.objects.all()
+    return render(request, 'senior.html', {"seniors": seniors})
 
 
 def menn(request):
     """A view to return the men courses"""
 
-    return render(request, 'menn.html')
+    menns = Menn.objects.all()
+    return render(request, 'menn.html', {"menns": menns})

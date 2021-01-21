@@ -2,4 +2,43 @@
 {% load static %}
 
 {% block content %}
+<div class="background-image-three">
+    </div>
+    <div id="panel-header">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title">Yoga for menn</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% for menn in menns %}
+            <div class="container">
+                <h3  id="margin-top" class="underline text-center">{{ menn.menn_header }}</h3>
+                <div id="text-center" class="col-sm-12 col-lg-8 offset-lg-2">
+                    <p>{{ menn.menn_text }}</p>
+                </div>
+                <div class="col-4 offset-4">
+                    {% if menn.image %}
+                        <img id="pic-settings" class="rounded-circle" src="{{ menn.image.url }}" alt="{{ menn.menn_header }}">
+                    {% else %}
+                        <img class="img-fluid rounded-circle extra-styling" src="{{ MEDIA_URL }}noimage.png" alt="{{ menn.menn_header }}">
+                    {% endif %}
+                </div>
+                <div class="row">
+                    <div class="col-sm-12 col-lg-6">
+                        <p>{{ menn.menn_content }}</p>
+                    </div>
+                    <div class="col-sm-12 col-lg-6">
+                        <p>{{ menn.menn_content_2 }}</p>
+                    </div>
+                </div>
+                <div id="text-center" class="col-sm-12 col-lg-8 offset-lg-2">
+                    <p>{{ menn.menn_content_3 }}</p>
+                    <p>{{ menn.menn_content_4 }}</p>
+                    <a id="button-styling" href="bestille.html" class="btn btn-primary">Bestille</a>
+                </div>
+            </div>
+        {% endfor %}
+    </div>
 {% endblock %}

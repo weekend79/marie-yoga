@@ -18,8 +18,8 @@
                     <p>{{ ashvin.header_text }}</p>
                 </div>
                 <div class="col-4 offset-4">
-                    {% if products.image %}
-                        <img class="img-fluid rounded-circle extra-styling" src="{{ ashvin.image.url }}" alt="{{ ashvin.ash_vin_header }}">
+                    {% if ashvin.image %}
+                        <img id="pic-settings" class="rounded-circle" src="{{ ashvin.image.url }}" alt="{{ ashvin.ash_vin_header }}">
                     {% else %}
                         <img class="img-fluid rounded-circle extra-styling" src="{{ MEDIA_URL }}noimage.png" alt="{{ ashvin.ash_vin_header }}">
                     {% endif %}
