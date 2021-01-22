@@ -1,0 +1,34 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}		
+    <div class="background-image-three"></div>
+    <div id="panel-header">
+        <div class="panel panel-default">
+            <div class="panel-heading">
+                <h2 class="panel-title" style="text-transform: uppercase;">Live Yoga På Facebook</h2>
+            </div>
+        </div>
+    </div>
+    <div class="container">
+        {% for live in lives %}
+            <h3  id="margin-top" class="underline text-center">{{ live.live_header }}</h3>
+           
+            <div id="text-center" class="col-sm-12 col-lg-8 offset-lg-2">
+                <p>{{ live.live_content }}</p>
+                <p>{{ live.live_content_2 }}</p>
+                <p>{{ live.live_content_3 }}</p>
+                <p>{{ live.live_content_4 }}</p>
+                <p>{{ live.live_content_5 }}</p>
+                <p>{{ live.live_content_6 }}</p>
+                <p>{{ live.live_content_7 }}</p>
+                    
+            </div>
+            <div class="col-sm-12 col-lg-8 offset-lg-2"></div>
+                <p class="col-sm-6 col-lg-4 text-center">Pris: {{ live.pris }},-</p> 
+            
+                <a id="button-styling" href="bestille.html" class="btn btn-primary text-center">Bestille</a>
+            </div>
+        {% endfor %}
+    </div>
+{% endblock %}

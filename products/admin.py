@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import AshVin, Senior, Menn
+from .models import AshVin, Senior, Menn, Live
 
 
 # Register your models here.
@@ -34,3 +34,14 @@ class MennAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Menn, MennAdmin)
+
+
+class LiveAdmin(admin.ModelAdmin):
+    list_display = (
+        'live_header',
+    )
+
+    ordering = ('live_header',)
+
+
+admin.site.register(Live, LiveAdmin)

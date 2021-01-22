@@ -39,3 +39,18 @@ class Menn(models.Model):
 
     def __str__(self):
         return self.menn_header
+
+
+class Live(models.Model):
+    live_header = models.CharField(max_length=120, default='')
+    live_content = models.TextField(null=True, blank=True)
+    live_content_2 = models.TextField(null=True, blank=True)
+    live_content_3 = models.TextField(null=True, blank=True)
+    live_content_4 = models.TextField(null=True, blank=True)
+    live_content_5 = models.TextField(null=True, blank=True)
+    live_content_6 = models.TextField(null=True, blank=True)
+    live_content_7 = models.TextField(null=True, blank=True)
+    pris = models.DecimalField(max_digits=8, decimal_places=0)
+
+    def __str__(self):
+        return self.live_header
