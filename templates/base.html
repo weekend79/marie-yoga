@@ -35,7 +35,21 @@
 					</li>
 					<li class="nav-item text-size-navbar">
 						<a class="nav-link" href="{% url 'contact' %}">Kontakt</a>
-					</li>
+                    </li>
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-into font-weight-bold{% else %}text-black{% endif %} nav-link" href="{% url 'view_bag' %}">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        kr {{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        Kr 0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
 				</ul>
 			</div>
             
